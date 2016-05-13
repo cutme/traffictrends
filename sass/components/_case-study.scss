@@ -1,0 +1,66 @@
+.c-case-study {
+	position: relative;
+
+	h5 {
+		margin-bottom: 15px;
+	}	
+
+	p {
+		font-size: em(16);
+	}
+	
+	a {
+		&:hover {
+			.o-media {
+				@include opacity(.8);
+			}
+			
+			h5 {
+				color: $red;
+			}
+		}
+	}
+	
+	&--big {
+		min-height: 680px;
+	}
+	
+	&__bigimage {
+		position: absolute;
+		right: 0; top: 0;
+		width: grid(1150, 1920);
+		height: 100%;
+		overflow: hidden;
+		
+		img {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			height: 100%;
+			width: auto;
+			-webkit-transform: translate(-50%,-50%);
+			-ms-transform: translate(-50%,-50%);
+			transform: translate(-50%,-50%);
+		}
+	}
+	
+	&__excerpt {
+		float: left;
+		width: grid(770, 1920);
+		padding: {
+			left: calc((100% - 1180px)/2);
+			right: 40px;
+		}
+	}
+
+	&__item {
+		display: inline-block;
+		width: 390px;
+		padding: 0 45px;
+		text-align: left;
+		
+		.o-media {
+			margin-bottom: 35px;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.c-numbers {
+	
+	&__image {
+		position: absolute;
+		right: 0; top: 0;
+		width: 506px; height: 405px;
+		background: {
+			image: url(../img/svg/numbers.svg);
+			repeat: no-repeat;
+			position: center bottom;
+		}
+	}
+	
+	&__text {		
+		width: 640px;
+		
+		dt {
+			width: grid(170, 640);
+			line-height: 1;
+			font: {
+				size: em(72);
+				weight: $medium;
+			}
+		}		
+	}
+
+	.o-media {
+		display: inline-block;
+		width: 120px;
+		margin: 0 10px;
+	}
+}

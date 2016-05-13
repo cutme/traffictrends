@@ -1,0 +1,59 @@
+.c-events {
+
+	&__collegium {
+		@include background-size(63%);
+		@include border-radius(50%);
+		position: absolute;
+		left: 0; top: -45px;
+		z-index: 10;
+		width: 118px; height: 118px;
+		background: {
+			image: url(../img/icon-collegium.png);
+			repeat: no-repeat;
+			position: center;
+			color: white;
+		}    
+		border: 2px solid #d9d9d9;
+		overflow: hidden;
+	}
+	
+	&__content {
+		padding-top: 100px;
+		text-align: left;
+	}
+	
+	&__image {
+		@include background-size(cover);
+		float: left;
+		position: relative; z-index: 5;
+		width: 618px; height: 363px;
+		background-image: url(../img/svg/laptop.svg);
+		padding: 24px 0 0 76px;
+	}
+	
+	&__text {
+		float: right;
+		width: 480px;
+		
+		dt, dd {
+			padding-bottom: 10px;
+		}
+
+		dt {
+			width: 120px;
+			padding-right: 20px;
+		}
+		
+		h4 {
+			margin-bottom: 30px;
+		}
+
+		p {
+			padding-left: 20px;
+			border-left: 1px solid $red;
+		}
+	}
+}
+
+
+

@@ -1,0 +1,41 @@
+[class^="icon-"], [class*=" icon-"] {
+	@include icomoon;
+}
+
+.u-align-center {
+	text-align: center;
+}
+
+.u-buffer {
+	margin-bottom: 50px;
+	
+	&--half {
+		margin-bottom: 25px;
+	}
+	
+	&--double {
+		margin-bottom: 100px;
+	}
+}
+
+.u-nopadding {
+	padding: 0 !important;
+}
+
+.u-posy {
+	@include scut-center-transform(y);
+}
+
+.u-3-cols {
+	@include column-count(3);
+	@include column-gap(50px);
+//	@include column-break-inside(avoid);
+	
+}
+
+.safari {
+	* {
+		-webkit-backface-visibility: hidden;
+		-webkit-transform-style: preserve-3d;
+	}
+}

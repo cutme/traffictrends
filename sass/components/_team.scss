@@ -1,0 +1,36 @@
+.c-team {
+	&__item {
+		display: inline-block;
+		width: 295px;
+	}
+	
+	&__name {
+		margin-bottom: 15px;
+		text-transform: uppercase;
+		font: {
+			size: em(18);
+			weight: $extrabold;
+		}
+	}
+	
+	&__pos {
+		text-transform: uppercase;
+		font-size: em(14);
+	}
+	
+	&__mail {
+		display: block;
+		font-size: em(16);
+		color: #999;
+		
+		&:hover {
+			color: $red;
+		}
+	}
+	
+	.o-media {
+		margin-bottom: 35px;
+		border-bottom-width: 5px;
+		border-bottom-style: solid;
+	}
+}

@@ -1,0 +1,59 @@
+.o-btn {
+	@include border-radius(50px);
+	@include transition-property(all);
+	@include transition-duration(60ms);
+	display: inline-block;
+	position: relative;
+	display: inline-block;
+	color: white;
+	
+	&--big {
+		height: 64px;
+		line-height: 64px;
+		font-weight: $extrabold;
+	}
+	
+	&--normal {
+		height: 50px;
+		line-height: 50px;
+		text-transform: uppercase;
+		padding: 0 50px;
+		font: {
+			size: 16px;
+			weight: $bold;
+		}
+	}
+	
+	&--small {
+		height: 35px;
+		line-height: 35px;
+		text-transform: uppercase;
+		padding: 0 20px;
+		font: {
+			size: 11px;
+			weight: $bold;
+		}
+	}
+	
+	&.u-bg-blue {
+		&:hover {
+			background-color: lighten($blue, 10%);
+		}
+	}
+	
+	&.u-bg-red {
+		&:hover {
+			background-color: lighten($red, 10%);
+		}
+	}
+	
+	&.u-bg-yellow {
+		&:hover {
+			background-color: lighten($yellow, 10%);
+		}
+	}
+	
+	&:active {
+		@include transform(scale(1.1));
+	}
+}

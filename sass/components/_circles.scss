@@ -1,0 +1,63 @@
+.c-circles {	
+	&__content {
+		margin: 0 auto;
+	}
+
+	&__icon {
+		@include border-radius( 50% );
+		display: block;
+		margin: 0 auto 30px auto;
+		color: white;		
+	}	
+	
+	&__item {
+		float: left;
+		width: 390px;	
+		
+		&:nth-child(3n+1) {
+			clear: left;
+		}
+	}
+	
+	&__lead {
+		margin-bottom: 1em;
+	}
+	
+	&__text {
+		font-size: em(16);
+	}
+
+	&--small {
+		.c-circles__icon {
+			width: 118px; height: 118px;
+			line-height: 118px;
+			font-size: em(118);
+		}
+
+		.c-circles__item {
+			padding: 0 20px;
+		}
+	}
+
+	&--big {
+		.c-circles__icon {
+			width: 166px; height: 166px;
+			border: {
+				width: 6px;
+				style: solid;
+			}
+			line-height: 150px;
+			font-size: em(72);
+			
+			&.icon-social, {
+				font-size: em(80);
+			}
+		}
+		
+		.c-circles__item {
+			padding: 0 60px;
+		}
+	}
+}
+
+

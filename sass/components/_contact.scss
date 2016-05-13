@@ -1,0 +1,43 @@
+.c-contact {
+	
+	p {
+		margin-bottom: 30px;
+	}
+	
+	address {
+		margin-bottom: 15px;
+		font-size: em(16);
+	}
+	
+	&__infoline {
+		display: block;
+		margin-bottom: 15px;
+		font-size: em(30);
+	}
+
+	&__tel-mail {	
+		
+		li {
+			display: inline-block;
+			width: 240px;
+			font-size: em(16);
+		}
+		
+		i {
+			display: inline-block;
+			margin-right: 10px;
+			font-size: 40px;
+			vertical-align: middle;
+			
+			&.icon-mail {
+				font-size: 30px;
+			}
+		}
+	}
+	
+	.c-footer & {
+		float: left;
+		width: 520px;
+		color: white;
+	}
+}

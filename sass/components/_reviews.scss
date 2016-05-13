@@ -1,0 +1,66 @@
+.c-reviews {	
+		
+	p {
+		font-size: em(16);
+	}
+	
+	&__author {
+		display: block;
+		text-transform: uppercase;
+		font-weight: $extrabold;
+	}
+	
+	&__item {
+		width: 840px;
+		margin: 0 auto;
+	}
+	
+	&__text{
+		margin-bottom: 20px;
+	}
+
+	.owl-stage-outer {
+		margin-bottom: 50px;
+	}
+	
+	.owl-nav {
+		width: 100%;
+		position: relative;
+		text-align: center;
+		
+		.owl-prev,
+		.owl-next {
+			@include border-radius(50%);
+			@include transition-property(all);
+			@include transition-duration(60ms);
+			@include icomoon;
+			display: inline-block;
+			width: 40px;
+			height: 40px;			
+			background-color: $red;
+			margin: 0 10px;
+			line-height: 38px;
+			color: white;
+			
+			&:hover {
+				background-color: darken($red, 10%);
+			}
+			
+			&:active {
+				@include transform(scale(1.1));
+			}
+		}
+		
+		.owl-next {
+			&:before {
+				content: "\e90b";
+			}
+		}
+		
+		.owl-prev {
+			&:before {
+				content: "\e90c";
+			}
+		}		
+	}
+}

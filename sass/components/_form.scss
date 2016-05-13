@@ -1,0 +1,59 @@
+.c-form {
+	input, textarea {
+		background-color: white;
+		padding: 0 20px;
+		font-size: em(14);
+		color: $black;
+	}
+
+	input {
+		height: 50px;
+	}
+	
+	textarea {
+		height: 160px;
+		padding: 20px;
+	}
+
+	&__item {
+		.c-contact-form & {
+			margin-bottom: 30px;
+		}
+
+		.c-order & {
+			float: left;
+			width: 300px;
+			margin-right: 20px;
+		}
+		
+		&--submit {
+			.c-order & {
+				width: auto;
+			}			
+		}
+	}
+	
+	&--small {
+	
+		@include input-placeholder {
+			color: #949494;
+		}
+		
+		input {
+			height: 35px;
+			background-color: #f2f2f2;
+			font-size: em(11);
+		}
+		
+		.c-form__item {
+			margin-bottom: 10px;
+			
+			&--submit {
+				margin-bottom: 30px;
+				padding-top: 10px;		
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,20 @@
+.o-regular {
+	p {
+		margin-bottom: 2em;
+		font-size: em(16);
+	}
+	
+	strong {
+		text-transform: uppercase;
+	}
+	
+	&__content {
+		float: left;
+		width: 800px;
+		
+		&--full {
+			float: none;
+			width: 100%;
+		}
+	}
+}

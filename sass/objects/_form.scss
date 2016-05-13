@@ -1,0 +1,58 @@
+.icon-chevron-thin-right:before {
+    content: "\e90b";
+}
+.icon-chevron-thin-left:before {
+    content: "\e90c";
+}
+.icon-advert:before {
+    content: "\e900";
+}
+.icon-content:before {
+    content: "\e901";
+}
+.icon-pay:before {
+    content: "\e902";
+}
+.icon-position:before {
+    content: "\e903";
+}
+.icon-remarketing:before {
+    content: "\e904";
+}
+.icon-search-engine .path1:before {
+    content: "\e905";
+    color: rgb(0, 0, 0);
+}
+.icon-search-engine .path2:before {
+    content: "\e906";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-shop:before {
+    content: "\e907";
+}
+.icon-social-2:before {
+    content: "\e908";
+}
+.icon-social:before {
+    content: "\e909";
+}
+.icon-user:before {
+    content: "\e90a";
+}
+
+
+
+
+
+.tt {
+	@include background-size(contain);
+	display: inline-block;
+	width: 24px;
+	height: 22px;
+	background: {
+		image: url(../img/svg/tt.svg);
+		repeat: no-repeat;
+	}
+	vertical-align: middle;
+}

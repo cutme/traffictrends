@@ -1,0 +1,9 @@
+.c-table {
+	display: table;
+	width: 100%;
+	
+	dt, dd {
+		display: table-cell;
+		vertical-align: top;
+	}
+}

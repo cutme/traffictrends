@@ -1,0 +1,18 @@
+.c-topline {
+	position: fixed;
+	left: 0; top: 0; z-index: 5;
+	width: 100%;
+	padding: 40px 0 0 0;
+	
+	&.is-scrolling {
+		@include hover;
+		z-index: 30;
+		height: 70px;
+		background-color: white;
+		padding: 20px 0;
+
+		.c-logo {
+			width: 200px;
+		}
+	}
+}

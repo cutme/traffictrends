@@ -1,0 +1,70 @@
+.c-top {
+	height: 730px;
+	background: {
+		image: url(../img/top/map.png);
+		repeat: no-repeat;
+		position: center;
+		color: white;
+	}
+	padding-top: 130px;
+	
+	&__text {
+		right: 0;
+		width: 640px;
+	}
+	
+	&--subsite {
+		height: 640px;
+
+		.c-circles__icon {
+			left: -25px;
+		}
+
+		.c-top__text {
+			position: absolute;
+			top: 0;
+			padding: {
+				bottom: 0;
+				top: 50px;
+			}
+		}
+		
+		.c-top__lead {
+			position: relative;
+			padding-left: 125px;
+			
+			span {
+				font-size: em(40);
+			}
+		}
+		
+		.c-top__sublead {
+			margin-bottom: 30px;
+			padding-top: 10px;
+			text-transform: uppercase;
+			font: {
+				size: em(25);
+				weight: $book;
+			}
+		}
+	}
+
+	&--home {
+		.c-top__text {
+			padding-bottom: 140px;
+		}
+		
+		h2 {	
+			margin-bottom: 25px;
+			font-size: em(60);
+		}
+		
+		h3 {
+			font: {
+				size: em(42);
+				weight: $book;
+			}
+		}
+	}
+}
+

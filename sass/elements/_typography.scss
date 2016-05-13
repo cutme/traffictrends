@@ -1,0 +1,21 @@
+body {
+	@include antialias;
+	line-height: 1.5;
+	font: {
+		family: $text;
+		size: #{$base-font-size}px;
+		weight: $regular;
+	}
+	color: $black;
+}
+
+a { 
+	@include hover;
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+strong {
+	font-weight: $extrabold;
+}
