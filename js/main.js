@@ -37,10 +37,10 @@ jQuery(function($) {
 
 				var map = new google.maps.Map(document.getElementById('map'), {
 					zoom: 17,
-					center: myLatLng
+					center: myLatLng,
+					scrollwheel: false
 				});
 				
-
 				var marker = new google.maps.Marker({
 					position: myLatLng,
 					map: map,
