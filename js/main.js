@@ -36,7 +36,7 @@ jQuery(function($) {
 				var myLatLng = {lat: parseFloat($('#map').attr('data-lat')), lng: parseFloat($('#map').attr('data-lng'))};
 
 				var map = new google.maps.Map(document.getElementById('map'), {
-					zoom: 17,
+					zoom: 18,
 					center: myLatLng,
 					scrollwheel: false
 				});
