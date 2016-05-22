@@ -16,6 +16,14 @@ a {
 	cursor: pointer;
 }
 
+
+br {
+
+	@media screen and ( max-width: 480px ) {
+		display: none;
+	}
+}
+
 strong {
 	font-weight: $extrabold;
 }

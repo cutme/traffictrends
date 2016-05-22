@@ -2,5 +2,10 @@
 	@include hover;
 	position: relative; z-index: 5;
 	float: left;
-	width: 270px;	
+	width: 270px;
+	
+	@media screen and ( max-width: 480px ) {
+		width: grid(270, 450);
+	}
+	
 }

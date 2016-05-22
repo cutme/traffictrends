@@ -1,17 +1,10 @@
 .c-opinions {
 
 	&__item {
-		float: left;
 		position: relative;
-		width: 570px;
 		background-color: white;
-		margin-bottom: 40px;
-		padding: 30px 60px 70px 30px;
-		overflow: hidden;
-		
-		&:nth-child(even) {
-			float: right;
-		}
+		padding: 30px grid(60) 70px grid(30);
+		overflow: hidden;		
 		
 		&:after {
 			position: absolute;
@@ -86,4 +79,25 @@
 			border-color: transparent transparent $yellow transparent;
 		}
 	}
+	
+	@media screen and ( min-width: 769px ) {
+		&__item {
+			float: left;
+			width: grid(570);
+			margin-bottom: 40px;
+			
+			&:nth-child(even) {
+				float: right;
+			}
+		}
+	}
+	
+	@media screen and ( max-width: 768px ) {
+		&__item {
+			float: none;
+			max-width: 570px;
+			margin: 0 auto 20px auto;
+		}
+	}
+	
 }

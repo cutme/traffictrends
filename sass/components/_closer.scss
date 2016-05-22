@@ -1,6 +1,11 @@
 .c-closer {
 	float: left;
-	width: 580px;
-
+	width: grid(580);
+	
+	@media screen and ( max-width: 960px ) {
+		float: none;
+		width: 100%;
+		margin-bottom: 60px;
+		text-align: center;
+	}
 }
-

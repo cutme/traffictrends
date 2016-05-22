@@ -1,6 +1,7 @@
 .c-social {
 	li {
 		float: left;
+		margin-bottom: 3px;
 		
 		a {
 			position: relative;
@@ -26,8 +27,10 @@
 			}
 			
 			&:hover {
-				&:after {
-					top: 0;
+				.dekstop & {
+					&:after {
+						top: 0;
+					}
 				}
 			}
 		}
@@ -45,7 +48,7 @@
 			font-size: em(44);
 		}
 	}
-	
+
 	&--big {
 		a {
 			width: 90px; height: 90px;
@@ -78,4 +81,13 @@
 			}
 		}
 	}
+	
+	@media screen and ( max-width: 960px ) {
+		li {
+			display: inline-block;
+			margin-right: 0;
+			float: none;
+		}
+	}
+	
 }

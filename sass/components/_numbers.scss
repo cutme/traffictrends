@@ -1,9 +1,7 @@
 .c-numbers {
 	
 	&__image {
-		position: absolute;
-		right: 0; top: 0;
-		width: 506px; height: 405px;
+		width: grid(506); height: 405px;
 		background: {
 			image: url(../img/svg/numbers.svg);
 			repeat: no-repeat;
@@ -12,7 +10,7 @@
 	}
 	
 	&__text {		
-		width: 640px;
+		width: grid(640);
 		
 		dt {
 			width: grid(170, 640);
@@ -20,13 +18,58 @@
 			font: {
 				size: em(72);
 				weight: $medium;
-			}
+			}			
 		}		
 	}
 
 	.o-media {
 		display: inline-block;
-		width: 120px;
+		max-width: 120px;
 		margin: 0 10px;
+	}
+	
+	@media screen and ( min-width: 961px ) {
+		&__image {
+			position: absolute;
+			right: 0; top: 0;
+		}
+	}
+	
+	@media screen and ( max-width: 960px ) {
+		&__text {
+			width: auto;
+			max-width: 640px;
+			margin-bottom: 40px;
+		}
+		
+		&__image {
+			width: auto;
+			max-width: 506px;
+			margin: 0 auto;
+		}
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		&__text {
+			dt {
+				width: grid(160, 480);
+				font-size: em(48);
+			}
+			
+			dd {
+				font-size: em(16);
+			}
+		}
+		
+		.o-media {
+			max-width: 70px;
+		}
+	}
+	
+	@media screen and ( max-width: 425px ) {
+		&__image {
+			height: 260px;
+			background-position: center top;
+		}
 	}
 }

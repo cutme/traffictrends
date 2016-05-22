@@ -3,4 +3,12 @@
 	position: relative;
 	max-width: $grid-base-width+px;
 	margin: 0 auto;
+	
+	@media screen and ( max-width: $grid-base-width+px ) {
+		padding: {
+			left: 15px;
+			right: 15px;
+		}
+	}
+	
 }

@@ -22,8 +22,8 @@
 
 		.c-order & {
 			float: left;
-			width: 300px;
-			margin-right: 20px;
+			width: grid(300);
+			margin-right: grid(20);
 		}
 		
 		&--submit {
@@ -32,7 +32,7 @@
 			}			
 		}
 	}
-	
+
 	&--small {
 	
 		@include input-placeholder {
@@ -53,6 +53,25 @@
 				padding-top: 10px;		
 			}
 		}
+	}
+
+	@media screen and ( max-width: 768px ) {				
+		&__item {
+			.c-order & {
+				float: none;
+				width: auto;
+				max-width: 300px;
+				margin: 0 auto 20px auto;
+			}			
+
+			&--submit {
+				margin: 0 auto;
+			}
+		}	
+		
+		.o-btn {
+			width: 100%;
+		}		
 	}
 }
 

@@ -1,9 +1,15 @@
 .c-our-blog {
 	float: right;
-	width: 380px;
+	width: grid(380);
 	
 	.o-btn {
 		margin-top: 10px;
-		padding: 0 50px;
+		padding: 0 grid(50, 380);
+	}
+	
+	@media screen and ( max-width: 960px ) {
+		float: none;
+		width: 100%;
+		text-align: center;
 	}
 }

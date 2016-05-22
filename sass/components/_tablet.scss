@@ -1,8 +1,14 @@
 .c-tablet {
-	@include background-size(contain);
+	@include background-size(cover);
 	background: {
 		image: url(../img/tablet.jpg);
-		position: right top;
+		position: center;
 		repeat: no-repeat;
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		p {
+			font-size: em(16);
+		}
 	}
 }

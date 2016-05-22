@@ -4,5 +4,9 @@
 		display: inline-block;
 		width: 190px;
 		margin-bottom: 50px;
+		
+		@media screen and ( max-width: 480px ) {
+			width: 49%;
+		}
 	}
 }

@@ -10,9 +10,14 @@
 	
 	&__content {
 		float: left;
-		width: 800px;
+		width: grid(800);
 		
 		&--full {
+			float: none;
+			width: 100%;
+		}
+		
+		@media screen and ( max-width: 900px ) {
 			float: none;
 			width: 100%;
 		}

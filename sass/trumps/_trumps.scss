@@ -9,12 +9,21 @@
 .u-buffer {
 	margin-bottom: 50px;
 	
+	@media screen and ( max-width: 960px ) {
+		margin-bottom: 25px;
+	}
+	
 	&--half {
 		margin-bottom: 25px;
 	}
 	
 	&--double {
 		margin-bottom: 100px;
+		
+		@media screen and ( max-width: 480px ) {
+			margin-bottom: 50px;
+		}
+		
 	}
 }
 
@@ -27,15 +36,38 @@
 }
 
 .u-3-cols {
-	@include column-count(3);
-	@include column-gap(50px);
-//	@include column-break-inside(avoid);
-	
+	@media screen and ( min-width: 601px ) {
+		@include column-count(3);
+		@include column-gap(50px);
+	}
+
+	@media screen and ( min-width: 601px ) and ( max-width: 900px ) {
+		@include column-count(2);
+	}		
+}
+
+.u-blur,
+.o-layout {
+	@include hover;
+	@include transition-duration(1000ms);
+
+	.is-blurred & {
+		@include filter( grayscale(50%) blur(10px) );
+		@include transform(scale(1.01));
+	}
 }
 
 .safari {
 	* {
 		-webkit-backface-visibility: hidden;
 		-webkit-transform-style: preserve-3d;
+	}
+}
+
+
+a { 
+	&:active,
+	&:focus {
+		-webkit-tap-highlight-color: rgba(0,0,0,0) !important;
 	}
 }

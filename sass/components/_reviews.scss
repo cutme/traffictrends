@@ -2,6 +2,10 @@
 		
 	p {
 		font-size: em(16);
+		
+		@media screen and ( max-width: 480px ) {
+			font-size: em(14);
+		}
 	}
 	
 	&__author {
@@ -11,12 +15,16 @@
 	}
 	
 	&__item {
-		width: 840px;
+		max-width: 840px;
 		margin: 0 auto;
+		padding: 0 15px;
 	}
 	
-	&__text{
+	&__text {
 		margin-bottom: 20px;
+		
+		
+		
 	}
 
 	.owl-stage-outer {
@@ -39,11 +47,13 @@
 			height: 40px;			
 			background-color: $red;
 			margin: 0 10px;
-			line-height: 38px;
+			line-height: 40px;
 			color: white;
 			
 			&:hover {
-				background-color: darken($red, 10%);
+				.desktop & {
+					background-color: darken($red, 10%);
+				}
 			}
 			
 			&:active {

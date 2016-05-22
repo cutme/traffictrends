@@ -23,17 +23,21 @@
 	}
 	
 	&__image {
-		@include background-size(cover);
+		@include background-size(contain);
 		float: left;
 		position: relative; z-index: 5;
-		width: 618px; height: 363px;
-		background-image: url(../img/svg/laptop.svg);
-		padding: 24px 0 0 76px;
+		width: grid(618); height: 363px;
+		background: {
+			image: url(../img/svg/laptop.svg);
+			repeat: no-repeat;
+			position: center top;
+		}
+		padding: 2% grid(72) 0 grid(76);
 	}
 	
 	&__text {
 		float: right;
-		width: 480px;
+		width: grid(480);
 		
 		dt, dd {
 			padding-bottom: 10px;
@@ -51,8 +55,58 @@
 		p {
 			padding-left: 20px;
 			border-left: 1px solid $red;
+			
+			@media screen and ( max-width: $grid-base-width+px ) {
+				font-size: em(16);
+			}
 		}
 	}
+	
+	@media screen and ( min-width: 960px ) {
+	
+	}
+	
+	@media screen and ( max-width: 960px ) {
+		&__image,
+		&__text {
+			float: none;
+			width: auto;
+			margin:  0 auto;
+		}
+		
+		&__image {
+			max-width: 618px;
+			margin-bottom: 40px;
+			padding: 24px 72px 0 76px;
+		}
+		
+		&__text {
+			max-width: 480px;
+		}
+	}
+	
+	@media screen and ( max-width: 618px ) {
+		&__image {
+			padding: 4% grid(72, 618) 0 grid(76, 618);
+		}
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		&__image {
+			height: 263px;
+		}
+		
+		&__collegium {
+			width: 98px; height: 98px;
+		}
+	}
+	
+	@media screen and ( max-width: 375px ) {
+		&__image {
+			height: 200px;
+		}
+	}
+	
 }
 
 

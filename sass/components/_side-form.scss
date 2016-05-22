@@ -1,13 +1,12 @@
 .c-side-form {	
 	@include box-shadow( rgba(0,0,0,.1) 0 4px 8px );
 	float: right;
-	width: 300px;
+	width: grid(300);
 	background-color: white;
 	padding: 40px 20px;
 	border-top: 10px solid $red;
 	
 	p {
-		margin-bottom: 0;
 		font-size: em(13);
 	}
 	
@@ -19,6 +18,14 @@
 	&__sublead {
 		margin-bottom: 20px;
 	}
+	
+	@media screen and ( max-width: 900px ) {
+		float: none;
+		width: auto;
+		max-width: 300px;
+		margin: 60px auto 0 auto;
+	}
+	
 }
 
 

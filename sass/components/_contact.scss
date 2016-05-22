@@ -37,7 +37,15 @@
 	
 	.c-footer & {
 		float: left;
-		width: 520px;
+		width: grid(520);
 		color: white;
+		
+		@media screen and ( max-width: 767px ) {
+			float: none;
+			width: auto;
+			max-width: 520px;
+			margin: 0 auto 40px auto;
+			text-align: center;
+		}
 	}
 }

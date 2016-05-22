@@ -1,5 +1,4 @@
 .c-top {
-	height: 730px;
 	background: {
 		image: url(../img/top/map.png);
 		repeat: no-repeat;
@@ -7,14 +6,23 @@
 		color: white;
 	}
 	padding-top: 130px;
-	
+
+	&__image {
+		&--normal {
+			width: grid(460);
+		}
+
+		&--wide {
+			width: grid(620);
+		}
+	}
+
 	&__text {
 		right: 0;
-		width: 640px;
+		width: grid(640);
 	}
-	
+
 	&--subsite {
-		height: 640px;
 
 		.c-circles__icon {
 			left: -25px;
@@ -32,12 +40,12 @@
 		.c-top__lead {
 			position: relative;
 			padding-left: 125px;
-			
+
 			span {
-				font-size: em(40);
+				font-size: em(40);						
 			}
 		}
-		
+
 		.c-top__sublead {
 			margin-bottom: 30px;
 			padding-top: 10px;
@@ -47,11 +55,100 @@
 				weight: $book;
 			}
 		}
+		
+		@media screen and ( max-width: $grid-base-width + px ) {
+			p {
+				font-size: 1.6vw;
+			}
+			
+			.c-circles__icon {
+				width: 9.5vw;
+				height: 9.5vw;
+				line-height: 9.5vw;
+				font-size: 9.5vw;
+			}
+			
+			.c-top__image {
+				float: left;
+			}
+
+			.c-top__lead {
+				padding-left: grid(125, 640);
+
+				span {
+					line-height: 3.5vw;
+					font-size: 3.3vw;
+				}
+			}
+			
+			.c-top__sublead {
+				font-size: 2vw;
+			}
+			
+			.c-top__text {
+				position: relative;
+				top: auto;
+				float: right;
+				margin-bottom: 40px;
+			}
+		}
+		
+		@media screen and ( max-width: 768px ) {
+		
+			p {
+				margin-bottom: 40px;
+				font-size: 14px;
+			}
+		
+			.c-circles__icon {
+				display: none;
+			}
+			
+			.c-top__image {
+				float: left;
+			}
+		
+			.c-top__lead {
+				margin-bottom: 0;
+				padding-left: 0;
+				
+				span {
+					line-height: initial;
+					font-size: 30px;
+				}
+			}
+			
+			.c-top__sublead {
+				font-size: 20px;
+			}
+
+			.c-top__text {
+				float: right;
+				position: relative;
+				top: auto; right: auto;
+				padding-top: 0;
+			}
+			
+			.c-top__sublead {
+				margin-bottom: 15px;
+			}
+		}
+		
+		@media screen and ( max-width: 640px ) {
+			.c-top__image {
+				display: none;
+			}
+			
+			.c-top__text {
+				float: none;
+				width: 100%;
+			}
+		}
 	}
 
 	&--home {
 		.c-top__text {
-			padding-bottom: 140px;
+			padding-bottom: 10%;
 		}
 		
 		h2 {	
@@ -63,6 +160,17 @@
 			font: {
 				size: em(42);
 				weight: $book;
+			}
+		}
+		
+		@media screen and ( max-width: $grid-base-width + px ) {
+		
+			h2 {
+				font-size: 5vw;
+			}
+			
+			h3 {
+				font-size: 3.5vw;
 			}
 		}
 	}
