@@ -71,7 +71,6 @@
 	@media screen and ( min-width: 941px ) {
 		@include scut-center-transform(y);
 		right: 0;
-		overflow: auto;
 		
 		> ul > li {
 			float: left;

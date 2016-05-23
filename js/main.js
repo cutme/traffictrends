@@ -103,12 +103,6 @@ jQuery(function($) {
 				n = $('.c-nav-primary'),
 				b = $('body'),
 				status = false;
-				
-	/*
-var e = $('.c-nav-primary');
-			    e.detach();
-			    b.prepend(e);
-*/
 
 			function fromRightSide() {
 				function showNav() {
@@ -130,9 +124,7 @@ var e = $('.c-nav-primary');
 						b.toggleClass('is-blurred');
 						status === false && hideNav();
 					}
-				});
-				
-				
+				});				
 			}
 			
 			function openSubmenuOnMobile() {
