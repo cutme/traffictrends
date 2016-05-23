@@ -12,9 +12,9 @@
 
 
 .c-nav-primary {	
-	position: relative;
+	//position: relative;
 	z-index: 5;
-	float: right;
+	//float: right;
 	margin-top: -20px;
 	
 	.is-scrolling & {
@@ -24,7 +24,6 @@
 	a {
 		position: relative;
 		display: block;
-		white-space: nowrap;
 		text-transform: uppercase;
 		font: {
 			size: em(15);
@@ -65,34 +64,37 @@
 		
 		a {
 			padding: 8px 20px;
-			font-size: 14px;
-
-			&:hover {
-				.desktop & {
-					background-color: darken($gray, 5%);
-				}
-			}
+			font-size: 12px;		
 		}
 	}
 
 	@media screen and ( min-width: 941px ) {
+		@include scut-center-transform(y);
+		right: 0;
+		overflow: auto;
 		
 		> ul > li {
 			float: left;
 		
 			> a {
+				overflow: hidden;
+				height: 120px;
+				line-height: 120px;
 				padding: 0 22px;
-				height: 70px;
-				line-height: 70px;
+				
+				.is-scrolling & {
+					height: 70px;
+					line-height: 70px;
+				}
 				
 				&:hover {
-					background-color: $gray;
+					color: $red;
 				}
 			}
 
 			&:hover {
-				.desktop & {
-					background-color: $gray;
+				> a {
+					color: $red;
 				}
 				
 				.sub-menu {
@@ -108,20 +110,56 @@
 		
 		.sub-menu {
 			position: absolute;
-			right: 0; top: 70px;
-			background-color: $gray;
+			right: 0; top: 120px;
+			background-color: #333;
+			border-top: 2px solid $red;
+			
+			.is-scrolling & {
+				top: 70px;
+			}
+			
+			a {
+				white-space: nowrap;
+				color: rgba(white, .8);
+				
+				&:hover {
+					.desktop & {
+						color: white;
+					}
+				}
+			}
+			
+			li {
+				&:first-child {
+					a {
+						padding-top: 10px;
+					}
+				}
+				
+				&:last-child {
+					a {
+						padding-bottom: 10px;
+					}
+				}
+			}
 		}
 	}
 	
 	@media screen and ( max-width: 940px ) {
 		@include box-shadow(rgba(0,0,0,.2) 0 2px 30px);
-		position: absolute;
-		top: -40px; right: -240px;
+		position: fixed;
+		top: 20px; right: -240px;
 		display: none;
-		height: 1000px;
-		width: 240px;
+		height: 100%;
+		width: 280px;
 		background-color: rgba(255,255,255,0.9);
-		padding: 80px 20px 0 20px;
+		padding: 90px 60px 20px 20px;
+		overflow: scroll;
+		-webkit-overflow-scrolling: touch;
+		
+		.is-scrolling & {
+			padding-top: 60px;
+		}
 
 		li {
 			float: none;
@@ -132,8 +170,14 @@
 			}
 			
 			a {
-				padding: 8px 10px;
+				padding: 8px 0;
 				font-weight: $medium;
+			}
+		}
+		
+		.sub-menu {
+			a {
+				padding-right: 0;
 			}
 		}
 	}

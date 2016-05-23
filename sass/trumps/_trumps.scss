@@ -52,9 +52,15 @@
 	@include transition-duration(1000ms);
 
 	.is-blurred & {
-		@include filter( grayscale(50%) blur(10px) );
+		//@include filter( grayscale(50%) blur(10px) );
+		@include filter( blur(10px) );
 		@include transform(scale(1.01));
 	}
+}
+
+.no-overflow {
+	overflow: hidden;
+	//position: fixed;
 }
 
 .safari {
