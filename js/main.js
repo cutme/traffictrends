@@ -146,14 +146,14 @@ var e = $('.c-nav-primary');
 				$('a', n).on('click', function(e) {	
 					if ( $(this).next('.sub-menu').length > 0 ) {
 						e.preventDefault();
-						$(this).next('.sub-menu').toggle().toggleClass('is-visibe');				
+						$(this).next('.sub-menu').slideToggle().toggleClass('is-visibe');				
 					};
 				})
 			}
 			
 			t.unbind('click').on('click', function(e) {
 				e.preventDefault();				
-				$('body, html').toggleClass('no-overflow');
+				b.toggleClass('no-overflow');
 				$(this).toggleClass('is-active');
 				fromRightSide();				
 				openSubmenuOnMobile();
