@@ -132,14 +132,7 @@ var e = $('.c-nav-primary');
 					}
 				});
 				
-				$(window).resize(debouncer(function(e) {
-					if (window_smaller_than(941)) {
-						n.attr('style', '');
-						$('.sub-menu').attr('style', '');
-					} else {
-						$('body').removeClass('is-blurred');
-					}
-				}));
+				
 			}
 			
 			function openSubmenuOnMobile() {
@@ -155,9 +148,20 @@ var e = $('.c-nav-primary');
 				e.preventDefault();				
 				b.toggleClass('no-overflow');
 				$(this).toggleClass('is-active');
-				fromRightSide();				
-				openSubmenuOnMobile();
+				fromRightSide();
 			});
+			
+			
+			openSubmenuOnMobile();
+			
+			$(window).resize(debouncer(function(e) {
+				if (window_smaller_than(941)) {
+					n.attr('style', '');
+					$('.sub-menu').attr('style', '');
+				} else {
+					$('body').removeClass('is-blurred');
+				}
+			}));
 
 		},
 		init: function() {
