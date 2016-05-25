@@ -64,7 +64,8 @@
 		
 		a {
 			padding: 8px 20px;
-			font-size: 12px;		
+			line-height: 1.2;
+			font-size: 11px;		
 		}
 	}
 
@@ -108,36 +109,57 @@
 		}
 		
 		.sub-menu {
+			@include border-radius( 4px );
+			//@include box-shadow( #f6f6f6 0 0 0 3px );
+			@include box-shadow( rgba(0,0,0,.05) 0 0 0 3px );
 			position: absolute;
-			right: 0; top: 120px;
-			background-color: #333;
-			border-top: 2px solid $red;
+			left: 0; top: 90px;
+			width: 210px;
+			background-color: white;
+			border: 1px solid #e1e1e1;
+			text-align: left;
 			
+			&:before {
+				position: absolute;
+				left: 30px; top: -14px;
+				display: block;
+				width: 24px; height: 14px;
+				background-image: url(../img/triangle-submenu.png);
+				content: ' ';
+			}
+
 			.is-scrolling & {
 				top: 70px;
 			}
 			
 			a {
-				white-space: nowrap;
-				color: rgba(white, .8);
-				
+				padding: 15px 20px;
+
 				&:hover {
 					.desktop & {
+						background-color: $red;
 						color: white;
 					}
 				}
 			}
 			
 			li {
+				border-bottom: 1px solid #e1e1e1;
+				
 				&:first-child {
 					a {
-						padding-top: 10px;
+						@include border-top-left-radius(4px);
+						@include border-top-right-radius(4px);
 					}
 				}
 				
+
 				&:last-child {
+					border: none;
+					
 					a {
-						padding-bottom: 10px;
+						@include border-bottom-left-radius(4px);
+						@include border-bottom-right-radius(4px);
 					}
 				}
 			}
