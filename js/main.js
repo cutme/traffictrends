@@ -16,16 +16,8 @@ function debouncer(func, timeout) {
 }
 jQuery(function($) {
 	function exist(o) {
-		d = ($(o).length > 0) ? true : false;
+		var d = ($(o).length > 0) ? true : false;
 		return d;
-	}
-
-	function fixEl(el) {
-		var pos = $(el).position(),
-			b = $('body');
-		$(window).on('scroll', function() {
-			b.scrollTop() >= pos.top ? b.addClass('fixed') : b.removeClass('fixed');
-		});
 	}
 
 	function window_smaller_than(n) {
@@ -80,7 +72,7 @@ jQuery(function($) {
 			m.svgasimg ? true : replaceSvgImg();
 		},
 		topline: function() {
-			var b = $('body'),
+			var b = $(window),
 				el = $('.c-topline');
 
 			function init() {
@@ -132,8 +124,8 @@ jQuery(function($) {
 					if ( $(this).next('.sub-menu').length > 0 ) {
 						e.preventDefault();
 						$(this).next('.sub-menu').slideToggle().toggleClass('is-visibe');				
-					};
-				})
+					}
+				});
 			}
 			
 			t.unbind('click').on('click', function(e) {
@@ -159,7 +151,7 @@ jQuery(function($) {
 		init: function() {
 			N.mobileNav();
 		}
-	}
+	};
 	var S = {
 		reviews: function() {
 			var owl = $('.c-reviews .owl-carousel');
@@ -167,7 +159,6 @@ jQuery(function($) {
 				dots: false,
 				loop: true,
 				items: 1,
-				loop: true,
 				nav: true,
 				navText: ['', ''],
 				smartSpeed: 450
@@ -176,7 +167,7 @@ jQuery(function($) {
 		init: function() {
 			exist('.c-reviews') && S.reviews();
 		}
-	}
+	};
 	$(document).ready(function() {
 		L.init();
 		N.init();
