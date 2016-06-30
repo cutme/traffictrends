@@ -27,6 +27,14 @@
 	}
 }
 
+.u-float--left {
+	float: left;
+}
+
+.u-float--right {
+	float: right;
+}
+
 .u-nopadding {
 	padding: 0 !important;
 }
@@ -62,6 +70,15 @@
 	overflow: hidden;
 }
 
+.blog,
+.single {
+	background: {
+		image: url(../img/top/map.png);
+		repeat: no-repeat;
+		position: center;
+	}
+}
+
 .safari {
 	* {
 		-webkit-backface-visibility: hidden;
@@ -69,6 +86,9 @@
 	}
 }
 
+.yarpp-related {
+	margin: 0 !important;
+}
 
 a { 
 	&:active,
@@ -76,3 +96,75 @@ a {
 		-webkit-tap-highlight-color: rgba(0,0,0,0) !important;
 	}
 }
+
+
+
+
+
+.case {
+    margin-top: 50px;
+}
+
+.mail {
+    border: 1px solid white;
+    padding: 20px;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.font-green {
+    color:#2B913B;
+}
+
+.font-pink {
+    color:#C40046;
+    font-weight:600;
+}
+
+.lead-landing {
+    font-size: 2.7em;
+    margin-bottom: 20px;
+    text-align: center;
+    
+    @media screen and ( max-width: 1024px ) {
+		font-size: em(40);
+    }
+    
+    @media screen and ( max-width: 768px ) {
+		font-size: em(36);
+    }
+    
+    @media screen and ( max-width: 375px ) {
+		font-size: em(30);
+    }
+}
+
+.sublead-landing {
+    margin-bottom: 30px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.space {
+    padding-top: 30px;
+}
+
+p.lista {
+    margin-left: 20px;
+	font: {
+		size: .8em;
+		weight: 300;
+	}
+}
+
+textarea.malutki {
+	height: 70px;
+	background-color: #f2f2f2;
+	font-size: 0.55em;
+}
+

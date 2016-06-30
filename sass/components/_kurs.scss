@@ -1,0 +1,184 @@
+.o-kurs-autor {
+	float: left;
+	width: 49%;	
+	margin-bottom: 40px;
+	padding: 0 30px;
+    
+    p {
+	    font-weight: 300;
+	    margin: 20px 0;
+	}
+}
+
+.o-kurs-spis {
+	float: right;
+}
+
+.o-kurs-autor, .o-kurs-spis {
+	width: 49%;
+	padding: 0 30px;
+    font-size: .8em;
+    font-weight: 400;
+    line-height: 1.8em;
+}
+
+.kurs-spis li {
+    list-style: decimal;
+    margin-left:30px;
+    
+    a:hover {
+	    color:#C40046;
+	}
+}
+
+.kurs-top {
+	@include background-size( cover );
+	position: relative;
+	background-position: center;
+	height: 390px;
+	margin-top: 100px;
+	color: white;
+	
+	.o-wrap {
+		height: 100%;
+	}
+    
+    h1 {
+		position: absolute;
+		bottom: 0;
+		display: block;
+		width: 70%;
+		background-color: white;
+		padding: 20px;
+		font-size: 1.8em;
+	    color: black;
+	}
+	
+	&--small {
+		height: 170px;
+		
+		h1 {
+			padding: 25px;
+			font-size: 2em;
+		}
+	}
+}
+
+.kurs-top-small {    
+   /*
+ height: 170px;
+    margin-top: 100px;
+    color: white;
+    
+    h1 {
+	    font-size: 2em;
+	    padding:25px;
+	    color:black;
+	    background-color: white;
+	    display:block;
+	    top: 50px;
+	    position: relative;
+	    width:70%;
+	}
+*/
+}
+
+.kurs-tresc {
+    padding: 0 15%;
+    
+    h2 {
+		margin-top:20px;
+		font-size: 1.4em;
+	}
+	
+	h3 {
+		margin-top:20px;
+		font-size: 1.2em;
+	}
+	
+	h4 {
+		margin-top:20px;
+		font-size: 1.1em;
+	}
+	
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	ol {
+	    font-size: 1em;
+	    margin: 20px 0;
+	    font-weight: 300;
+	    line-height: 1.7em;
+	    
+	    li {
+			list-style: decimal;
+		    margin-left:30px;
+		}
+	}
+    
+    p {
+	    font-size: 1em;
+	    text-align: justify;
+	    margin:20px 0;
+	    font-weight: 300;
+	    line-height: 1.7em;
+	}
+	
+	table {
+	    margin: 40px;
+	    width: 100%;
+	    
+	    img {
+		    max-width: 99%;
+		    margin: 20px auto;
+		}
+	
+		tbody td {
+		   font-weight: 300;
+		   text-align: center;
+		}
+	
+		th {
+		   text-align: center;
+		}    
+	}
+	
+	@media screen and ( max-width: 768px ) {
+		padding: 0 20px;
+		
+		table {
+			margin: 40px 0;
+		}
+	}
+	
+}
+
+p.kurs-cytat {
+    font-size:1.5em;
+    margin: 40px;
+}
+
+
+@media screen and ( max-width: 768px ) {
+	.o-kurs-autor, .o-kurs-spis {
+		float: none;
+		width: 100%;
+	}
+
+	.kurs-top h1 {
+	    width: calc(100% - 30px);
+	}
+	
+	p.kurs-cytat,
+	table {
+		margin: 40px 0;
+	}
+}
+
+@media screen and ( max-width: 480px ) {
+	.o-kurs-autor, .o-kurs-spis {
+		padding: 0;
+	}
+}

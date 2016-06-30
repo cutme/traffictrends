@@ -25,52 +25,6 @@ jQuery(function($) {
 		return d;
 	}
 	var L = {
-		googleMap: function() {
-			function initMap() {
-				var myLatLng = {
-					lat: parseFloat($('#map').attr('data-lat')),
-					lng: parseFloat($('#map').attr('data-lng'))
-				};
-				var map = new google.maps.Map(document.getElementById('map'), {
-					zoom: 19,
-					center: myLatLng,
-					scrollwheel: false,
-					draggable: false
-				});
-				var marker = new google.maps.Marker({
-					position: myLatLng,
-					map: map,
-					title: 'Hello World!'
-				});
-				google.maps.event.addDomListener(window, 'resize', function() {
-					map.setCenter(myLatLng);
-				});
-				marker.setMap(map);
-			}
-			$.getScript('https://www.google.com/jsapi', function() {
-				google.load('maps', '3', {
-					other_params: 'sensor=false&libraries=places',
-					callback: function() {
-						initMap();
-					}
-				});
-			});
-		},
-		modernizrSupport: function() {
-			var m = Modernizr.addTest('svgasimg', document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Image', '1.1'));
-
-			function replaceSvgImg() {
-				var i = document.getElementsByTagName("img"),
-					j, y;
-				for (j = i.length; j--;) {
-					y = i[j].src;
-					if (y.match(/svg$/)) {
-						i[j].src = y.slice(0, -3) + 'png';
-					}
-				}
-			}
-			m.svgasimg ? true : replaceSvgImg();
-		},
 		topline: function() {
 			var b = $(window),
 				el = $('.c-topline');
@@ -81,11 +35,16 @@ jQuery(function($) {
 			}
 			
 			function init_white() {
+				el.removeClass('is-scrolling is-white');
+				el.addClass('is-black');
+				
 				// sprawdz, czy jestesmy na blogu i mamy foto				
 				if ( $('.c-top__post--photo').length > 0 ) {
 					el.removeClass('is-scrolling is-black');
 					el.addClass('is-white');
 				}
+				
+				
 			}
 
 			function init() {
@@ -97,8 +56,6 @@ jQuery(function($) {
 			init();
 		},
 		init: function() {
-			exist('.c-google-map') && L.googleMap();
-			L.modernizrSupport();
 			L.topline();
 		}
 	};
@@ -165,25 +122,9 @@ jQuery(function($) {
 			N.mobileNav();
 		}
 	};
-	var S = {
-		reviews: function() {
-			var owl = $('.c-reviews .owl-carousel');
-			owl.owlCarousel({
-				dots: false,
-				loop: true,
-				items: 1,
-				nav: true,
-				navText: ['', ''],
-				smartSpeed: 450
-			});
-		},
-		init: function() {
-			exist('.c-reviews') && S.reviews();
-		}
-	};
+	
 	$(document).ready(function() {
 		L.init();
 		N.init();
-		S.init();
 	});
 });

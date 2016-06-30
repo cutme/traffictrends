@@ -6,3 +6,20 @@
 	max-width: 100%;
 	height: auto;
 }
+
+.imgcanvas {
+	text-align: center;
+	margin: 20px;
+    
+	img {
+		border: 1px solid #F0F0F0;
+	    padding: 20px; 
+		max-width: 100%;
+		height: auto;
+	}
+	
+	@media screen and ( max-width: 768px ) {
+		margin: 20px 0;
+	}
+	
+}

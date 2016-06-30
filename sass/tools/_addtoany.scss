@@ -1,0 +1,36 @@
+.addtoany_list {
+	a {
+		@include border-radius( 50% );
+		width: 38px; height: 38px;
+		border: 1px solid #dcdcdc !important;
+		margin-right: 5px;
+		line-height: 38px;
+		text-align: center;
+		
+		img {
+			filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=60) !important;
+			opacity:0.6 !important;
+			width: 14px !important;
+		}
+		
+		&.a2a_button_facebook {
+			img {
+				width: 9px !important;
+			}
+		}
+		
+		&.a2a_button_google_plus {
+			img {
+				width: 18px !important;
+			}
+		}
+		
+		&:hover {
+			border-color: $red !important;
+		}
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		text-align: center;
+	}
+}

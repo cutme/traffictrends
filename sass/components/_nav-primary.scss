@@ -12,9 +12,7 @@
 
 
 .c-nav-primary {	
-	//position: relative;
 	z-index: 5;
-	//float: right;
 	margin-top: -20px;
 	
 	.is-scrolling & {
@@ -34,6 +32,12 @@
 	> ul > li {
 		@include hover;
 		position: relative;
+		
+		> a {
+			.is-white & {
+				color: white;
+			}
+		}
 		
 		> &:last-child {
 			padding-right: 0;
@@ -136,7 +140,8 @@
 				padding: 15px 20px;
 
 				&:hover {
-					.desktop & {
+					.desktop &,
+					.no-mobile & {
 						background-color: $red;
 						color: white;
 					}

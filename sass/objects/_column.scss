@@ -1,0 +1,27 @@
+.o-column {
+
+	&--left {
+		float: left;
+		width: grid(880);
+	}
+	
+	&--right {
+		float: right;
+		width: grid(240);
+	}
+	
+	@media screen and ( max-width: 940px ) {
+		&--left,
+		&--right {
+			float: none;
+			width: auto;
+			max-width: 880px;
+			margin: 0 auto;
+		}
+		
+		&--left {
+			
+		}
+	}
+	
+}

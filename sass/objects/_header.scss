@@ -5,3 +5,30 @@
 		margin-bottom: 20px;
 	}
 }
+
+.o-header--small {
+	display: block;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-size: em(14);
+
+	.c-best &,
+	.c-see & {
+		@media screen and ( max-width: 460px ) {
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	.c-see & {
+		font-size: em(16);
+	}
+	
+	a {
+		color: $red;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

@@ -1,8 +1,29 @@
 .c-logo {
 	@include hover;
 	position: relative; z-index: 5;
-	//float: left;
 	width: 270px;
+
+
+	&--black {
+		.is-black & {
+			display: block;
+		}
+		
+		.is-white & {
+			display: none;
+		}
+	}
+	
+	&--white {
+		.is-black & {
+			display: none;
+		}
+
+		.is-white & {
+			display: block;
+		}
+	}
+
 	
 	@media screen and ( max-width: 480px ) {
 		width: grid(270, 450);

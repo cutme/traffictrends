@@ -54,12 +54,12 @@
 		}		
 	}
 	
-	
 	&__item {
 		display: inline-block;
 		width: grid(390);
 		padding: 0 grid(45);
 		text-align: left;
+		vertical-align: top;
 		
 		.o-media {
 			margin-bottom: 35px;

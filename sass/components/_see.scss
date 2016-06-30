@@ -1,0 +1,51 @@
+.c-see {
+	background-color: $gray;
+	padding: 50px 0;
+	font-size: em(18);
+	
+	li {
+		float: left;
+		width: grid(358);
+		margin-right: grid(50);
+		
+		&:last-child {
+			margin-right: 0;
+		}
+		
+		a {
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	
+	&__title {
+		display: block;
+		text-transform: uppercase;
+		line-height: 1.2;
+		font-size: em(18);
+	}
+	
+	.o-media {
+		margin-bottom: 15px;
+	}
+	
+	@media screen and ( max-width: 940px ) {
+		&__title {
+			font-size: em(16);
+		}
+	}
+	
+	@media screen and ( max-width: 460px ) {
+		li {
+			float: none;
+			width: 240px;
+			margin: 0 auto 25px auto;
+			text-align: center;
+			
+			&:last-child {
+				margin-right: auto;
+			}
+		}
+	}
+}

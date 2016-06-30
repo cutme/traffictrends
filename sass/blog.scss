@@ -4,6 +4,7 @@
 @import "settings/colors";
 @import "settings/global";
 
+@import "tools/addtoany";
 @import "tools/clear";
 @import "tools/functions";
 @import "tools/mixins";
@@ -27,36 +28,19 @@
 @import "objects/regular";
 @import "objects/wrap";
 
-@import "components/case-study";
 @import "components/categories";
-@import "components/circles";
-@import "components/clients";
-@import "components/closer";
 @import "components/contact";
 @import "components/contact-form";
 @import "components/copyrights";
-@import "components/events";
 @import "components/form";
-@import "components/google-map";
-@import "components/kurs";
 @import "components/logo";
 @import "components/nav-primary";
 @import "components/nav-trigger";
-@import "components/numbers";
-@import "components/ogloszenie";
-@import "components/ofertowka";
-@import "components/opinions";
-@import "components/order";
-@import "components/our-blog";
+@import "components/pagination";
 @import "components/post";
-@import "components/reviews";
 @import "components/see";
 @import "components/side-form";
 @import "components/social";
-@import "components/table";
-@import "components/tablet";
-@import "components/team";
-@import "components/tools";
 @import "components/top";
 @import "components/topline";
 
