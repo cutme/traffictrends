@@ -1,2 +1,2 @@
 # TrafficTrends
-Live: http://traffictrends.pl
+Live: [traffictrends.pl](http://traffictrends.pl)
